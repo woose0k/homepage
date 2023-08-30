@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="menu">
+        <nav>
+          <ul class="tab">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#project">project</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="job-name">
+      <div class="container">
+        <h5>Back-End | Front-End</h5>
+        <h1>WEB<br>DEVELOPER</h1>
+        <h3>
+          <pre>Park Wooseok</pre>
+        </h3>
+      </div>
+
+    </section>
+    <hr>
+    <section class="about" id="about">
+      <div class="about-tag">
+        <h2>About</h2>
+      </div>
+      <br>
+      <div class="about-area">
+        <div class="profile-img">
+        </div>
+        <div class="introduce">
+          <h2>Profile</h2>
+          <br>
+          <ul>
+            <li>
+              이름 : 박우석</li><br>
+            <li>전화번호 : 123-4567-8901</li><br>
+            <li>이메일 : family1234@gmail.com</li><br>
+            <div class="text-wrap"><span class="text"></span><span>|</span>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <script>
+        const content = "모래뿐일 따뜻한 듣기만 끝에 있는가? 안고, 피가 소담스러운 없으면, 역사를 시들어 것이다. 갑 그들의 쓸쓸한 창공에 군영과 그들의 원대하고, 바로 것이다. 힘차게 못할 피고 따뜻한 것은 피다. 낙원을 같이, 같지 원대하고, 무엇을 있으랴? 그들의 그러므로 착목한는 내는 못할 보라. 있는 얼마나 전인 밝은 보배를 청춘의 이는 있으랴?";
+        const text = document.querySelector(".text");
+        let i = 0;
+
+        function typing() {
+          let txt = content[i++];
+          text.innerHTML += txt === "\n" ? "<br/>" : txt;
+          if (i > content.length) {
+            text.textContent = "";
+            i = 0;
+          }
+        }
+        setInterval(typing, 150)
+      </script>
+    </section>
+    <hr>
+
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-wrap">
+        <div class="wrapper1">
+          <div class="wrapper2">
+            <div class="category"><img src="java.png"></div>
+            <div class="bar-wrap">
+              <div class="bar">
+                <span>
+                  expert
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper2">
+            <div class="category"><img src="oracle.jpg"></div>
+            <div class="bar-wrap">
+              <div class="bar">
+                <span>
+                  expert
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper2">
+            <div class="category"><img src="html.png"></div>
+            <div class="bar-wrap">
+              <div class="bar">
+                <span>
+                  expert
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper2">
+            <div class="category"><img src="js.png"></div>
+            <div class="bar-wrap">
+              <div class="bar">
+                <span>
+                  advanced
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <section class="project" id="project">
+      <h2>project</h2>
+      <div class="grid">
+        <div class="list">
+          <img src="variousGameIcon.png" alt="variousGame">
+          <a href="https://github.com/woose0k/sleep" target="_blank">다형성게임</a>
+        </div>
+        <div class="list">
+          <img src="managementIcon.png" alt="managemen">
+          <a href="https://github.com/woose0k/Takecare" target="_blank">콘솔 관리 프로그램</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div><a href="https://github.com/woose0k" target="_blank"><img src="githubIcon.png" alt="githubIcon"></a></div>
+        <div>
+          <p>&copy; 2023 Park wooseok | Portfolio #1</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
